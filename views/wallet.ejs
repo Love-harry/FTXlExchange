@@ -1,0 +1,344 @@
+<body id="dark">
+    <header class="dark-bb">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="/"><img src="img/logo-light.svg" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headerMenu" aria-controls="headerMenu"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="icon ion-md-menu"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="headerMenu">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="/profile">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/wallet">Wallet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/settings">Settings</a></li>
+                </ul>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown header-img-icon">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="img/avatar.svg" alt="avatar">
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header d-flex flex-column align-items-center">
+                                <div class="figure mb-3">
+                                    <img src="img/avatar.svg" alt="">
+                                </div>
+                                <div class="info text-center">
+                                    <p class="name font-weight-bold mb-0">
+                                        <%= user.name %>
+                                    </p>
+                                    <p class="email text-muted mb-3">
+                                        <%= user.email %>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="dropdown-body">
+                                <ul class="profile-nav">
+                                    <li class="nav-item">
+                                        <a href="/profile" class="nav-link">
+                                            <i class="icon ion-md-person"></i>
+                                            <span>Profile</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/wallet" class="nav-link">
+                                            <i class="icon ion-md-wallet"></i>
+                                            <span>My Wallet</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/settings" class="nav-link">
+                                            <i class="icon ion-md-settings"></i>
+                                            <span>Settings</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/users/logout" class="nav-link red">
+                                            <i class="icon ion-md-power"></i>
+                                            <span>Log Out</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            </div>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="settings mtb15">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-lg-3">
+                    <div class="nav flex-column nav-pills settings-nav" id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
+                        <a class="nav-link" id="settings-profile-tab" href="/profile"><i
+                                class="icon ion-md-person"></i>Profile</a>
+                        <a class="nav-link active" id="settings-wallet-tab" href="/wallet"><i
+                                class="icon ion-md-wallet"></i> Wallet</a>
+                        <a class="nav-link" id="settings-tab" href="/settings"><i
+                                class="icon ion-md-settings"></i>Settings</a>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-9">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="settings-wallet" role="tabpanel"
+                            aria-labelledby="settings-wallet-tab">
+                            <div class="wallet">
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-4 mb-3">
+                                        <!-- TradingView Widget BEGIN -->
+                                        <div class="tradingview-widget-container">
+                                            <div class="tradingview-widget-container__widget"></div>
+                                            <script type="text/javascript"
+                                                src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js"
+                                                async>
+                                                    {
+                                                        "colorTheme": "dark",
+                                                            "dateRange": "12M",
+                                                                "showChart": true,
+                                                                    "locale": "en",
+                                                                        "width": "100%",
+                                                                            "height": "590",
+                                                                                "largeChartUrl": "",
+                                                                                    "isTransparent": false,
+                                                                                        "showSymbolLogo": true,
+                                                                                            "showFloatingTooltip": false,
+                                                                                                "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+                                                                                                    "plotLineColorFalling": "rgba(41, 98, 255, 1)",
+                                                                                                        "gridLineColor": "rgba(42, 46, 57, 0)",
+                                                                                                            "scaleFontColor": "rgba(120, 123, 134, 1)",
+                                                                                                                "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
+                                                                                                                    "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
+                                                                                                                        "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
+                                                                                                                            "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
+                                                                                                                                "symbolActiveColor": "rgba(41, 98, 255, 0.12)",
+                                                                                                                                    "tabs": [
+                                                                                                                                        {
+                                                                                                                                            "title": "Indices",
+                                                                                                                                            "symbols": [
+                                                                                                                                                {
+                                                                                                                                                    "s": "FOREXCOM:SPXUSD",
+                                                                                                                                                    "d": "S&P 500"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "FOREXCOM:NSXUSD",
+                                                                                                                                                    "d": "US 100"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "FOREXCOM:DJI",
+                                                                                                                                                    "d": "Dow 30"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "INDEX:NKY",
+                                                                                                                                                    "d": "Nikkei 225"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "INDEX:DEU40",
+                                                                                                                                                    "d": "DAX Index"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "FOREXCOM:UKXGBP",
+                                                                                                                                                    "d": "UK 100"
+                                                                                                                                                }
+                                                                                                                                            ],
+                                                                                                                                            "originalTitle": "Indices"
+                                                                                                                                        },
+                                                                                                                                        {
+                                                                                                                                            "title": "Futures",
+                                                                                                                                            "symbols": [
+                                                                                                                                                {
+                                                                                                                                                    "s": "CME_MINI:ES1!",
+                                                                                                                                                    "d": "S&P 500"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "CME:6E1!",
+                                                                                                                                                    "d": "Euro"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "COMEX:GC1!",
+                                                                                                                                                    "d": "Gold"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "NYMEX:CL1!",
+                                                                                                                                                    "d": "Crude Oil"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "NYMEX:NG1!",
+                                                                                                                                                    "d": "Natural Gas"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "CBOT:ZC1!",
+                                                                                                                                                    "d": "Corn"
+                                                                                                                                                }
+                                                                                                                                            ],
+                                                                                                                                            "originalTitle": "Futures"
+                                                                                                                                        },
+                                                                                                                                        {
+                                                                                                                                            "title": "Bonds",
+                                                                                                                                            "symbols": [
+                                                                                                                                                {
+                                                                                                                                                    "s": "CME:GE1!",
+                                                                                                                                                    "d": "Eurodollar"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "CBOT:ZB1!",
+                                                                                                                                                    "d": "T-Bond"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "CBOT:UB1!",
+                                                                                                                                                    "d": "Ultra T-Bond"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "EUREX:FGBL1!",
+                                                                                                                                                    "d": "Euro Bund"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "EUREX:FBTP1!",
+                                                                                                                                                    "d": "Euro BTP"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "EUREX:FGBM1!",
+                                                                                                                                                    "d": "Euro BOBL"
+                                                                                                                                                }
+                                                                                                                                            ],
+                                                                                                                                            "originalTitle": "Bonds"
+                                                                                                                                        },
+                                                                                                                                        {
+                                                                                                                                            "title": "Forex",
+                                                                                                                                            "symbols": [
+                                                                                                                                                {
+                                                                                                                                                    "s": "FX:EURUSD"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "FX:GBPUSD"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "FX:USDJPY"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "FX:USDCHF"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "FX:AUDUSD"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "s": "FX:USDCAD"
+                                                                                                                                                }
+                                                                                                                                            ],
+                                                                                                                                            "originalTitle": "Forex"
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                    }
+                                                </script>
+                                        </div>
+                                        <!-- TradingView Widget END -->
+                                    </div>
+                                    <div class="col-md-12 col-lg-8">
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade show active" id="coinBTC" role="tabpanel">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Balances</h5>
+                                                        <ul>
+                                                            <li
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <div class="d-flex align-items-center">
+                                                                    <i class="icon ion-md-cash"></i>
+                                                                    <h2>Total Equity</h2>
+                                                                </div>
+                                                                <div>
+                                                                    <h3>
+                                                                        <%= user.total %> BTC
+                                                                    </h3>
+                                                                </div>
+                                                            </li>
+                                                            <li
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <div class="d-flex align-items-center">
+                                                                    <i class="icon ion-md-checkmark"></i>
+                                                                    <h2>Bitcon Equity</h2>
+                                                                </div>
+                                                                <div>
+                                                                    <h3>
+                                                                        <%= user.bitcoin %> BTC
+                                                                    </h3>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <button class="btn green">Deposit</button>
+                                                        <button class="btn red">Withdraw</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Wallet Deposit Address</h5>
+                                                        <div class="row wallet-address">
+                                                            <div class="col-md-8">
+                                                                <p>Deposits to this address are unlimited. Note that you
+                                                                    may not be able to withdraw all
+                                                                    of your
+                                                                    funds at once if you deposit more than your daily
+                                                                    withdrawal limit.</p>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="form-control"
+                                                                        value="Empty for now...">
+                                                                    <div class="input-group-prepend">
+                                                                        <button class="btn btn-primary">COPY</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <img src="assets/img/qr-code-light.svg" alt="qr-code">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Latest Transactions</h5>
+                                                        <div class="wallet-history">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>No.</th>
+                                                                        <th>Date</th>
+                                                                        <th>Status</th>
+                                                                        <th>Amount</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td>
+                                                                            <%= user.created %>
+                                                                        </td>
+                                                                        <td><i
+                                                                                class="icon ion-md-checkmark-circle-outline green"></i>
+                                                                        </td>
+                                                                        <td>+ <%= user.bitcoin %>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
