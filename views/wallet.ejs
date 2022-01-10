@@ -2,8 +2,8 @@
     <header class="dark-bb">
         <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="/"><img src="img/logo-light.svg" alt="logo"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headerMenu" aria-controls="headerMenu"
-                aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headerMenu"
+                aria-controls="headerMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="icon ion-md-menu"></i>
             </button>
 
@@ -254,14 +254,27 @@
                                                                 </div>
                                                                 <div>
                                                                     <h3>
-                                                                        <%= user.total %> BTC
+                                                                        <%= user.total %> USD
                                                                     </h3>
                                                                 </div>
                                                             </li>
                                                             <li
                                                                 class="d-flex justify-content-between align-items-center">
                                                                 <div class="d-flex align-items-center">
-                                                                    <i class="icon ion-md-checkmark"></i>
+                                                                    <i class="icon ion-ios-ribbon"></i>
+                                                                    <h2>Bonus amount</h2>
+                                                                </div>
+                                                                <div>
+                                                                    <h3>
+                                                                        <%= user.bonus %> USD
+                                                                    </h3>
+                                                                </div>
+                                                            </li>
+                                                            <hr style="border-bottom: 1px solid #2a2e39;">
+                                                            <li
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <div class="d-flex align-items-center">
+                                                                    <i class="icon ion-logo-bitcoin"></i>
                                                                     <h2>Bitcon Equity</h2>
                                                                 </div>
                                                                 <div>
@@ -271,8 +284,8 @@
                                                                 </div>
                                                             </li>
                                                         </ul>
-                                                        <button class="btn green">Deposit</button>
-                                                        <button class="btn red">Withdraw</button>
+                                                        <button class="btn green btn-md">Deposit</button>
+                                                        <button class="btn red btn-md">Withdraw</button>
                                                     </div>
                                                 </div>
                                                 <div class="card">
@@ -286,15 +299,19 @@
                                                                     funds at once if you deposit more than your daily
                                                                     withdrawal limit.</p>
                                                                 <div class="input-group">
-                                                                    <input type="text" class="form-control"
-                                                                        value="Empty for now...">
+                                                                    <input type="text" class="form-control js-content"
+                                                                        value="HU89jkpkjsn8u9equwpjKJ:KJoiKj9ioupoiUI89KJkjuh9pHIOH(*U(*" readonly>
                                                                     <div class="input-group-prepend">
-                                                                        <button class="btn btn-primary">COPY</button>
+                                                                        <button type="button"
+                                                                            class="btn btn-primary js-copy"
+                                                                            data-bs-toggle="tooltip"
+                                                                            data-bs-placement="top"
+                                                                            title="copy address">COPY</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-4">
-                                                                <img src="assets/img/qr-code-light.svg" alt="qr-code">
+                                                                <img src="img/qr-code-light.svg" alt="qr-code">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -316,7 +333,7 @@
                                                                     <tr>
                                                                         <td>1</td>
                                                                         <td>
-                                                                            <%= user.created %>
+                                                                            <!-- <%= user.created %> -->
                                                                         </td>
                                                                         <td><i
                                                                                 class="icon ion-md-checkmark-circle-outline green"></i>
@@ -341,4 +358,37 @@
             </div>
         </div>
     </div>
+
+    <script>
+        (function () {
+
+            var area = document.createElement('textarea');
+            document.body.appendChild(area);
+            area.style.display = "none";
+
+            var content = document.querySelectorAll('.js-content');
+            var copy = document.querySelectorAll('.js-copy');
+
+            for (var i = 0; i < copy.length; i++) {
+                copyOnClick(i);
+            }
+
+            function copyOnClick(i) {
+                copy[i].addEventListener('click', function () {
+                    area.style.display = "block";
+                    area.value = content[i].value;
+                    area.select();
+                    document.execCommand('copy');
+                    area.style.display = "none";
+
+                    var t = this;
+                    t.innerHTML = 'COPIED';
+                    setTimeout(function () {
+                        t.innerHTML = "COPY"
+                    }, 2500);
+                });
+            }
+
+        })();
+    </script>
 </body>
