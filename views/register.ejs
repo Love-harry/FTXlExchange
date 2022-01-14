@@ -77,8 +77,10 @@
 
         <div class="custom-control custom-checkbox">
           <input type="checkbox" checked class="custom-control-input" id="form-checkbox">
-          <label class="custom-control-label" for="form-checkbox">I agree to the <a href="#t&c">Terms &
-              Conditions</a></label>
+          <label class="custom-control-label" for="form-checkbox">I agree to the <a href="" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">Terms &
+              Conditions</a>
+          </label>
         </div>
         <button type="submit" class="btn btn-primary">Create Account</button>
       </form>
@@ -86,14 +88,73 @@
     </div>
   </div>
 
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title bold" id="exampleModalLabel">Terms & Services</h5>
+        </div>
+        <div class="modal-body">
+          <h5>FTX Exchange Terms of Service</h5>
+          <p>The following is a summary of some of our important restrictions.
+
+            FTX Exchange is owned by FTX Exchange Trading LTD, a company incorporated in Antigua and Barbuda, and
+            headquartered in the
+            Bahamas.
+
+            FTX Exchange does not onboard or provide services to corporate accounts of entities located in, established
+            in, or a
+            resident of
+            the United States of America, Cuba, Crimea and Sevastopol, Iran, Afghanistan, Syria, or North Korea. FTX
+            Exchange
+            also does not
+            onboard corporate accounts located in or a resident of Antigua or Barbuda. FTX Exchange also does not
+            onboard any
+            users from
+            Ontario, or non-professional investors from Hong Kong.
+            <b>FTX Exchange</b> does not onboard or provide services to personal accounts of current residents of the
+            United States of
+            America, Cuba, Crimea and Sevastopol, Iran, Afghanistan, Syria, North Korea, or Antigua and Barbuda. FTX
+            Exchange
+            also does
+            not onboard any users from Ontario, or non-professional investors from Hong Kong. There may be partial
+            restrictions in other jurisdictions, potentially including Hong Kong, Thailand,
+            Malaysia, and Canada. Please feel free to reach out to us with any further questions, and feel free to
+            upload any supplementary
+            documents at
+            <a href="https://ftxexchange.uk/profile">https://ftxexchange.uk/profile</a>.
+          </p>
+          <hr>
+          <h5>Note:</h5>
+          <p>If you deposit funds to the wrong address, FTX Exchange is not responsible for any losses and if we do not
+            generally
+            support the
+            deposited token or method we may be unable to recover it at all. If the funds are recoverable--e.g. sending
+            an ERC20
+            token to your ETH address or OMNI USDT to your BTC address--we can try to recover the funds. Doing so is not
+            guaranteed
+            and might take up to a week. We may also charge a fee for recovery. Similarly, sending ETH via a smart
+            contract to FTX Exchange
+            may not be automatically credited, and may take time to recover.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Accept</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="../js/jquery-3.4.1.min.js"></script>
-  <script src="../js/jquery.mCustomScrollbar.js"></script>
+  <script src="../js/bootstrap.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/popper.min.js"></script>
+  <script src="../js/jquery.mCustomScrollbar.js"></script>
+  <script src="../js/custom.js"></script>
   <script src="../js/amcharts.min.js"></script>
   <script src="../js/amcharts-core.min.js"></script>
   <script src="../js/Chart.bundle.min.js"></script>
-  <script src="../js/custom.js"></script>
 </body>
 
 </html>

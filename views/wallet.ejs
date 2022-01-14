@@ -306,7 +306,7 @@
                                                                             class="btn btn-primary js-copy"
                                                                             data-bs-toggle="tooltip"
                                                                             data-bs-placement="top"
-                                                                            title="copy address">COPY</button>
+                                                                            title="copy address"><i class="icon ion-md-copy"></i></button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -382,9 +382,9 @@
                     area.style.display = "none";
 
                     var t = this;
-                    t.innerHTML = 'COPIED';
+                    t.innerHTML = `<i class="icon ion-md-checkmark" ></i >`;
                     setTimeout(function () {
-                        t.innerHTML = "COPY"
+                        t.innerHTML = `<i class="icon ion-md-copy" ></i >`
                     }, 2500);
                 });
             }
