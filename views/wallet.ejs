@@ -284,8 +284,10 @@
                                                                 </div>
                                                             </li>
                                                         </ul>
-                                                        <button class="btn green btn-md">Deposit</button>
-                                                        <button class="btn red btn-md">Withdraw</button>
+                                                        <button type="button" class="btn green btn-md"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#deposit">Deposit</button>
+                                                        <button type="button" class="btn red btn-md">Withdraw</button>
                                                     </div>
                                                 </div>
                                                 <div class="card">
@@ -300,13 +302,15 @@
                                                                     withdrawal limit.</p>
                                                                 <div class="input-group">
                                                                     <input type="text" class="form-control js-content"
-                                                                        value="Wallet address here but its empty for now..." readonly>
+                                                                        value="Wallet address here but its empty for now..."
+                                                                        readonly>
                                                                     <div class="input-group-prepend">
                                                                         <button type="button"
                                                                             class="btn btn-primary js-copy"
                                                                             data-bs-toggle="tooltip"
                                                                             data-bs-placement="top"
-                                                                            title="copy address"><i class="icon ion-md-copy"></i></button>
+                                                                            title="copy address"><i
+                                                                                class="icon ion-md-copy"></i></button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -358,6 +362,110 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="deposit" tabindex="-1" aria-labelledby="depositLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="depositLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="list-group">
+                        <a href="" class="list-group-item list-group-item-action active" data-bs-dismiss="modal"
+                            aria-current="true" data-bs-toggle="modal" data-bs-target="#bitcoin">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">BTC</h5>
+                                <i class="fab fa-btc fa-2x" aria-hidden="true"></i>
+                            </div>
+                            <p class="mb-1">bitcoin</p>
+                            <small>Digital gold.</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">ETH</h5>
+                                <i class="fab fa-ethereum fa-2x" aria-hidden="true"></i>
+                            </div>
+                            <p class="mb-1">Ethereum</p>
+                            <small class="text-muted">Programmable contracts and money</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">BCH</h5>
+                                <i class="fab fa-bitcoin fa-2x" aria-hidden="true"></i>
+                            </div>
+                            <p class="mb-1">bitcash</p>
+                            <small class="text-muted">Bitcoin clone</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">XRP</h5>
+                                <i class="fas fa-coins fa-2x" aria-hidden="true"></i>
+                            </div>
+                            <p class="mb-1">Ripple</p>
+                            <small class="text-muted">Enterprise payment settlement network</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">BCH</h5>
+                                <i class="fab fa-bitcoin fa-2x" aria-hidden="true"></i>
+                            </div>
+                            <p class="mb-1">bitcash</p>
+                            <small class="text-muted">Bitcoin clone</small>
+                        </a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="bitcoin" tabindex="-1" aria-labelledby="bitcoinLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bitcoinLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Wallet Deposit Address</h5>
+                            <div class="row wallet-address">
+                                <div class="col-md-8">
+                                    <p>Deposits to this address are unlimited. Note that you
+                                        may not be able to withdraw all
+                                        of your
+                                        funds at once if you deposit more than your daily
+                                        withdrawal limit.</p>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control js-content"
+                                            value="Wallet address here but its empty for now..." readonly>
+                                        <div class="input-group-prepend">
+                                            <button type="button" class="btn btn-primary js-copy"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="copy address"><i
+                                                    class="icon ion-md-copy"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal"
+                        data-bs-target="#deposit">Back</button>
+                    <button type="button" class="btn btn-primary">Finish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script>
         (function () {
