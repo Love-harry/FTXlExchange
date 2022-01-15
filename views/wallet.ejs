@@ -310,7 +310,7 @@
                                                                             data-bs-toggle="tooltip"
                                                                             data-bs-placement="top"
                                                                             title="copy address"><i
-                                                                                class="icon ion-md-copy"></i></button>
+                                                                                class="icon ion-md-copy mr-2"></i>Copy address</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -342,7 +342,18 @@
                                                                         <td><i
                                                                                 class="icon ion-md-checkmark-circle-outline green"></i>
                                                                         </td>
-                                                                        <td>+ <%= user.bitcoin %>
+                                                                        <td>+ <%= user.bonus %>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>2</td>
+                                                                        <td>
+                                                                            <!-- <%= user.created %> -->
+                                                                        </td>
+                                                                        <td><i
+                                                                                class="icon ion-md-checkmark-circle-outline green"></i>
+                                                                        </td>
+                                                                        <td>
                                                                         </td>
                                                                     </tr>
 
@@ -368,8 +379,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="depositLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" id="depositLabel">Cryptocurrencies</h5>
                 </div>
                 <div class="modal-body">
                     <div class="list-group">
@@ -418,19 +428,17 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Bitcoin Modal -->
     <div class="modal fade" id="bitcoin" tabindex="-1" aria-labelledby="bitcoinLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="bitcoinLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="card">
@@ -486,9 +494,9 @@
                     area.style.display = "none";
 
                     var t = this;
-                    t.innerHTML = `<i class="icon ion-md-checkmark" ></i >`;
+                    t.innerHTML = `<i class="icon ion-md-checkmark mr-2" ></i >Copied`;
                     setTimeout(function () {
-                        t.innerHTML = `<i class="icon ion-md-copy" ></i >`
+                        t.innerHTML = `<i class="icon ion-md-copy mr-2"></i >Copy address`
                     }, 2500);
                 });
             }
