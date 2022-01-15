@@ -426,7 +426,7 @@
 
     <!-- Modal -->
     <div class="modal fade" id="bitcoin" tabindex="-1" aria-labelledby="bitcoinLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="bitcoinLabel">Modal title</h5>
@@ -443,14 +443,9 @@
                                         of your
                                         funds at once if you deposit more than your daily
                                         withdrawal limit.</p>
-                                    <div class="input-group">
+                                    <div class="form">
                                         <input type="text" class="form-control js-content"
                                             value="Wallet address here but its empty for now..." readonly>
-                                        <div class="input-group-prepend">
-                                            <button type="button" class="btn btn-primary js-copy"
-                                                data-bs-toggle="tooltip" data-bs-placement="top" title="copy address"><i
-                                                    class="icon ion-md-copy"></i></button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -460,7 +455,8 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal"
                         data-bs-target="#deposit">Back</button>
-                    <button type="button" class="btn btn-primary">Finish</button>
+                    <button type="button" class="btn btn-primary js-copy" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="copy address"><i class="icon ion-md-copy mr-2"></i>Copy address</button>
                 </div>
             </div>
         </div>
