@@ -287,7 +287,8 @@
                                                         <button type="button" class="btn green btn-md"
                                                             data-bs-toggle="modal"
                                                             data-bs-target="#deposit">Deposit</button>
-                                                        <button type="button" class="btn red btn-md">Withdraw</button>
+                                                        <button onclick="withdraw()" type="button"
+                                                            class="btn red btn-md">Withdraw</button>
                                                     </div>
                                                 </div>
                                                 <div class="card">
@@ -305,12 +306,11 @@
                                                                         value="Wallet address here but its empty for now..."
                                                                         readonly>
                                                                     <div class="input-group-prepend">
-                                                                        <button type="button"
-                                                                            class="btn btn-primary js-copy"
+                                                                        <button type="button" class="btn btn-primary"
                                                                             data-bs-toggle="tooltip"
                                                                             data-bs-placement="top"
                                                                             title="copy address"><i
-                                                                                class="icon ion-md-copy mr-2"></i>Copy address</button>
+                                                                                class="icon ion-md-copy mr-2"></i>Copy</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -451,10 +451,13 @@
                                         of your
                                         funds at once if you deposit more than your daily
                                         withdrawal limit.</p>
-                                    <div class="form">
+                                    <div class="input-group">
                                         <input type="text" class="form-control js-content"
                                             value="Wallet address here but its empty for now..." readonly>
                                     </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="img/qr-code-dark.svg" alt="qr-code">
                                 </div>
                             </div>
                         </div>
@@ -463,44 +466,13 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal"
                         data-bs-target="#deposit">Back</button>
-                    <button type="button" class="btn btn-primary js-copy" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="copy address"><i class="icon ion-md-copy mr-2"></i>Copy address</button>
+                    <button type="button" class="btn btn-primary js-copy" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="copy address"><i class="icon ion-md-copy mr-2"></i>Copy</button>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <script>
-        (function () {
-
-            var area = document.createElement('textarea');
-            document.body.appendChild(area);
-            area.style.display = "none";
-
-            var content = document.querySelectorAll('.js-content');
-            var copy = document.querySelectorAll('.js-copy');
-
-            for (var i = 0; i < copy.length; i++) {
-                copyOnClick(i);
-            }
-
-            function copyOnClick(i) {
-                copy[i].addEventListener('click', function () {
-                    area.style.display = "block";
-                    area.value = content[i].value;
-                    area.select();
-                    document.execCommand('copy');
-                    area.style.display = "none";
-
-                    var t = this;
-                    t.innerHTML = `<i class="icon ion-md-checkmark mr-2" ></i >Copied`;
-                    setTimeout(function () {
-                        t.innerHTML = `<i class="icon ion-md-copy mr-2"></i >Copy address`
-                    }, 2500);
-                });
-            }
-
-        })();
-    </script>
+    <script src="/js/copy.js"></script>
+    <script src="/js/sweet.js"></script>
 </body>
